@@ -8,7 +8,21 @@ import {DialogOverviewExample} from "./dialog-body/dialog-overview-example";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatRippleModule} from "@angular/material/core";
 // import { DialogBodyComponent } from './dialog-body/dialog-body.component';
+
+
+const modules = [
+  MatInputModule,
+  MatButtonModule,
+  MatFormFieldModule,
+  MatRippleModule,
+  MatDialogModule,
+  BrowserModule,
+  BrowserAnimationsModule,
+  FormsModule,
+];
 
 @NgModule({
   declarations: [
@@ -16,14 +30,8 @@ import {MatInputModule} from "@angular/material/input";
     DialogOverviewExample,
 
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatInputModule
-  ],
+  imports: [...modules],
+  exports: [...modules],
   providers: [],
   bootstrap: [AppComponent]
 })

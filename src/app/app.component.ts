@@ -11,6 +11,8 @@ import {DialogOverviewExample} from "./dialog-body/dialog-overview-example";
 export class AppComponent {
   title = 'working-dialogs';
   name: any;
+  data: any;
+  animal: any;
   constructor(private matDialog: MatDialog) {
   }
 
